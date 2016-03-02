@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище LocalDBModelContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Участники">
+      <EntityTypeMapping TypeName="LocalDBModel.Участники">
+        <MappingFragment StoreEntitySet="Участники">
+          <ScalarProperty Name="ID_участника" ColumnName="ID участника" />
+          <ScalarProperty Name="Логин" ColumnName="Логин" />
+          <ScalarProperty Name="Пароль" ColumnName="Пароль" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Эксперты">
+      <EntityTypeMapping TypeName="LocalDBModel.Эксперты">
+        <MappingFragment StoreEntitySet="Эксперты">
+          <ScalarProperty Name="ID_эксперта" ColumnName="ID эксперта" />
+          <ScalarProperty Name="Логин" ColumnName="Логин" />
+          <ScalarProperty Name="Пароль" ColumnName="Пароль" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="Телефон" ColumnName="Телефон" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

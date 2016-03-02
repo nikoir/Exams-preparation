@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@model CourseProject.Models.Account
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.ValidationSummary()
+        </div>
+        <div class="form-group">
+            <label class="control-label">Логин</label>
+            @Html.TextBoxFor(x => x.Login, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label class="control-label">Пароль</label>
+            @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+        </div>
+        <div class="form-group checkbox">
+            <label>
+                <input type="checkbox" />
+                Запомнить меня
+            </label>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" type="submit">
+                Войти
+            </button>
+        </div>
+    }
+</body>
+</html>
+
