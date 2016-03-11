@@ -27,5 +27,6 @@ namespace CourseProject.Models
     
         public virtual DbSet<Участники> Участники { get; set; }
         public virtual DbSet<Эксперты> Эксперты { get; set; }
+        public virtual DbSet<Предметы> Предметы { get; set; }
     }
 }

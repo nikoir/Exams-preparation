@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Хранилище LocalDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Предметы">
+    <Key>
+      <PropertyRef Name="ID предмета" />
+    </Key>
+    <Property Name="ID предмета" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Название" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="Участники">
     <Key>
       <PropertyRef Name="ID участника" />
@@ -21,6 +28,7 @@
     <Property Name="Телефон" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityContainer Name="Хранилище LocalDBModelContainer">
+    <EntitySet Name="Предметы" EntityType="Self.Предметы" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Участники" EntityType="Self.Участники" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Эксперты" EntityType="Self.Эксперты" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

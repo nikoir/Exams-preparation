@@ -23,5 +23,13 @@
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Участники" EntityType="Self.Участники" />
     <EntitySet Name="Эксперты" EntityType="Self.Эксперты" />
+    <EntitySet Name="Предметы" EntityType="LocalDBModel.Предметы" />
   </EntityContainer>
+  <EntityType Name="Предметы">
+    <Key>
+      <PropertyRef Name="ID_предмета" />
+    </Key>
+    <Property Name="ID_предмета" Type="Guid" Nullable="false" />
+    <Property Name="Название" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

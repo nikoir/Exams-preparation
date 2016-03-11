@@ -17,18 +17,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Здесь будет логотип", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Пункт1", "")</li>
+                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
                     <li>@Html.ActionLink("Пункт2", "")</li>
                     <li>@Html.ActionLink("Пункт3", "")</li>
                     <li>@Html.ActionLink("Пункт4", "")</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("Регистрация", "")</li>
-                    <li>@Html.ActionLink("Войти", "")</li>
+                    <li>@Html.ActionLink("Регистрация", "Register", "Account")</li>
+                    <li>@Html.ActionLink("Войти", "Login", "Account")</li>
                 </ul>
             </div>
         </div>

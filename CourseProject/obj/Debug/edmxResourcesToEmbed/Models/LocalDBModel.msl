@@ -23,5 +23,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Предметы">
+      <EntityTypeMapping TypeName="LocalDBModel.Предметы">
+        <MappingFragment StoreEntitySet="Предметы">
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="ID_предмета" ColumnName="ID предмета" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

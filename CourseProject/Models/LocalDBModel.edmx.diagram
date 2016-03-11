@@ -7,6 +7,7 @@
       <Diagram DiagramId="decd770149424f3eb365831152a7f5e9" Name="Diagram1">
         <EntityTypeShape EntityType="LocalDBModel.Участники" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LocalDBModel.Эксперты" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LocalDBModel.Предметы" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

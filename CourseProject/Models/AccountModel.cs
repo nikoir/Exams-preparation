@@ -14,23 +14,23 @@ namespace CourseProject.Models
             using(Entities db = new Entities())
             {
                 var ParticipantsList = db.Участники.ToList();
-                var ExpertsList = db.Участники.ToList();
+                var ExpertsList = db.Эксперты.ToList();
 
                 foreach(var Participant in ParticipantsList)
                     Accounts.Add(new Account() { Login = Participant.Логин, Password = Participant.Пароль, E_mail = Participant.E_mail, ID = Participant.ID_участника, Telephone = Participant.Телефон, UserType = UserType.Participant });
                 foreach (var Expert in ExpertsList)
-                    Accounts.Add(new Account() { Login = Expert.Логин, Password = Expert.Пароль, E_mail = Expert.E_mail, ID = Expert.ID_участника, Telephone = Expert.Телефон, UserType = UserType.Participant });
+                    Accounts.Add(new Account() { Login = Expert.Логин, Password = Expert.Пароль, E_mail = Expert.E_mail, ID = Expert.ID_эксперта, Telephone = Expert.Телефон, UserType = UserType.Expert});
             }
         }
 
         public Account Find (string username)
         {
-            return Accounts.Where(acc => acc.Login.Equals(username)).First();
+            return Accounts.Where(acc => acc.Login.Equals(username)).FirstOrDefault();
         }
 
         public Account Login (string username, string password)
         {
-            return Accounts.Where(acc => acc.Login.Equals(username) && acc.Password.Equals(password)).First();
+            return Accounts.Where(acc => acc.Login.Equals(username) && acc.Password.Equals(password)).FirstOrDefault();
         }
     }
 }
